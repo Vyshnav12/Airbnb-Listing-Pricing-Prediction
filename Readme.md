@@ -12,14 +12,14 @@
 - Outliers were identified and removed using the Tukey test.
 - The Tukey test uses the Interquartile Range (IQR) to detect outliers. The formula for outlier detection is:
 
-  \[
-  \text{Outlier} \text{ if } (x < Q1 - 1.5 \times IQR) \text{ or } (x > Q3 + 1.5 \times IQR)
-  \]
-
-  Where:
-  - \( Q1 \) = First quartile (25th percentile)
-  - \( Q3 \) = Third quartile (75th percentile)
-  - \( IQR \) = Interquartile Range (\( Q3 - Q1 \))
+  <div align="center">
+    <p>Outlier if</p>
+    <p><strong>x < Q1 - 1.5 × IQR</strong> or <strong>x > Q3 + 1.5 × IQR</strong></p>
+    <p>Where:</p>
+    <p><strong>Q1</strong> = First quartile (25th percentile)</p>
+    <p><strong>Q3</strong> = Third quartile (75th percentile)</p>
+    <p><strong>IQR</strong> = Interquartile Range (Q3 - Q1)</p>
+  </div>
 
 ### Custom Plotting Function
 
