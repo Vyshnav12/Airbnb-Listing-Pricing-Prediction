@@ -1,3 +1,50 @@
+# Data Analysis and Model Training
+
+## Data Cleaning and Preprocessing
+
+### Data Cleaning
+
+- The dataset was cleaned to remove any erroneous or irrelevant entries.
+- Unnecessary columns were removed to focus on relevant features.
+
+### Outlier Detection
+
+- Outliers were identified and removed using the Tukey test.
+- The Tukey test uses the Interquartile Range (IQR) to detect outliers. The formula for outlier detection is:
+
+  \[
+  \text{Outlier} \text{ if } (x < Q1 - 1.5 \times IQR) \text{ or } (x > Q3 + 1.5 \times IQR)
+  \]
+
+  Where:
+  - \( Q1 \) = First quartile (25th percentile)
+  - \( Q3 \) = Third quartile (75th percentile)
+  - \( IQR \) = Interquartile Range (\( Q3 - Q1 \))
+
+### Custom Plotting Function
+
+- A custom plotting function was created to visualize the data and analyze the results of the machine learning models.
+
+## Machine Learning Models
+
+Three models were trained and evaluated on the cleaned dataset:
+
+1. **Linear Regression**
+2. **Random Forest**
+3. **XGBoost**
+
+### Evaluation Metrics
+
+- **R2 Score**: Indicates how well the model explains the variance in the data.
+- **Mean Squared Error (MSE)**: Measures the average squared difference between actual and predicted values.
+
+- Plots comparing predictions to actual values were created to visualize model performance.
+
+### Best Model
+
+- The **Random Forest** model demonstrated the best performance and was saved as a `.pkl` file using `joblib`. This model is used in the Flask application to make predictions through the API.
+
+
 # Airbnb Price Prediction API
 
 This Flask application provides an API endpoint to obtain prediction results from a trained Random Forest model. The model predicts prices based on an Airbnb dataset.
